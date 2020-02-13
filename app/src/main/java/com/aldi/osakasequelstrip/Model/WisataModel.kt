@@ -1,4 +1,4 @@
-package com.aldi.osakasequelstrip
+package com.aldi.osakasequelstrip.Model
 
 data class WisataModel (
     var namaWisata : String = "",

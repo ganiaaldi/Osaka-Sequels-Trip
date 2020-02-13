@@ -25,5 +25,14 @@
             tools:listitem="@layout/list_wisata"
     />
 
-
+<androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnBatch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rvWisata"
+android:layout_centerHorizontal="true"
+        android:background="@color/colorPrimary"
+        android:layout_marginTop="15dp"
+        android:padding="10dp"
+android:text="Cek Batch Keberangkatan"/>
 </RelativeLayout>
