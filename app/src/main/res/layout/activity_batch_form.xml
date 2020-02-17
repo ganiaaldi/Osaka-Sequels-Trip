@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".BatchFormActivity"
+        android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etBatch"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Batch"
+            android:inputType="text" />
+<androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/SmallText"
+        android:hint="Musim"
+        android:layout_marginStart="5dp"/>
+    <RadioGroup
+            android:id="@+id/rgMusim"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+        <RadioButton
+                android:id="@+id/radioSummer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Summer" />
+
+        <RadioButton
+                android:id="@+id/radioSpring"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="Spring" />
+        <RadioButton
+                android:id="@+id/radioFall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Fall" />
+        <RadioButton
+                android:id="@+id/radioWinter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Winter" />
+    </RadioGroup>
+
+    <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etDurasi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Durasi"
+            android:inputType="text" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etTglAwal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="10"
+            android:hint="Tanggal Keberangkatan (YYYY-MM-DD)"
+            android:inputType="text" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etTglAkhir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="10"
+            android:hint="Tanggal Pulang (YYYY-MM-DD)"
+            android:inputType="text" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etDestinasi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="10"
+            android:hint="Keterangan Destinasi"
+            android:inputType="textCapSentences|textMultiLine" />
+
+    <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnBatchAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+    android:background="@color/colorPrimary"
+    android:text="Tambah Batch"/>
+</LinearLayout>

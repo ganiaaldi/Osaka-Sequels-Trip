@@ -1,6 +1,7 @@
 package com.aldi.osakasequelstrip
 
 import android.app.ProgressDialog
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -23,6 +24,10 @@ class BatchActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_batch)
+
+        batchFab.setOnClickListener {
+            startActivity(Intent(this,BatchFormActivity::class.java))
+        }
 
     }
 

@@ -18,8 +18,7 @@ class MainActivity : AppCompatActivity() {
 
 
         btnBatch.setOnClickListener {
-            intent = Intent (this,BatchActivity::class.java)
-            startActivity(intent)
+            startActivity(Intent(this,BatchActivity::class.java))
         }
         rvWisata.apply {
             layoutManager = LinearLayoutManager(context, LinearLayout.HORIZONTAL, false)
