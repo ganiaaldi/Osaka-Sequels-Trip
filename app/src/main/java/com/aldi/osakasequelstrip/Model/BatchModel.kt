@@ -1,7 +1,6 @@
 package com.aldi.osakasequelstrip.Model
 
 data class BatchModel(
-    val nomor: Int?,
     val batch: String?,
     val musim: String?,
     val durasi: String?,

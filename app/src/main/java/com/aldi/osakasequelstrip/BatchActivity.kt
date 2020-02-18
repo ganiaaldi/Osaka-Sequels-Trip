@@ -61,8 +61,7 @@ fun fan(){
                 for(i in 0 until jsonArray?.length()!!){
 
                     val jsonObject = jsonArray?.optJSONObject(i)
-                    listBatch.add(BatchModel(jsonObject.getInt("nomor"),
-                        jsonObject.getString("batch"),
+                    listBatch.add(BatchModel(jsonObject.getString("batch"),
                         jsonObject.getString("musim"),
                         jsonObject.getString("durasi"),
                         jsonObject.getString("tglawal"),
