@@ -57,6 +57,10 @@ class BatchFormActivity : AppCompatActivity() {
         btnBatchUpdate.setOnClickListener{
             update()
         }
+
+        btnBatchDelete.setOnClickListener{
+            delete()
+        }
     }
 
 
@@ -103,6 +107,32 @@ class BatchFormActivity : AppCompatActivity() {
             .addBodyParameter("tglawal",etTglAwal.text.toString())
             .addBodyParameter("tglakhir",etTglAkhir.text.toString())
             .addBodyParameter("destinasi",etDestinasi.text.toString())
+            .setPriority(Priority.MEDIUM)
+            .build()
+            .getAsJSONObject(object : JSONObjectRequestListener {
+
+                override fun onResponse(response: JSONObject?) {
+
+                    loading.dismiss()
+                    Toast.makeText(applicationContext,response?.getString("message"),Toast.LENGTH_SHORT).show()
+
+                    if(response?.getString("message")?.contains("successfully")!!){
+                        this@BatchFormActivity.finish()
+                    }
+
+                }
+                override fun onError(anError: ANError?) {
+                    loading.dismiss()
+                    Log.d("ONERROR",anError?.errorDetail?.toString())
+                    Toast.makeText(applicationContext,"Koneksi Gagal", Toast.LENGTH_SHORT).show()                    }
+            })
+    }
+
+    private fun delete(){
+        val loading = ProgressDialog(this)
+        loading.setMessage("Menghapus Data..")
+        loading.show()
+        AndroidNetworking.get(Endpoint.DELETE+"?batch="+etBatch.text.toString())
             .setPriority(Priority.MEDIUM)
             .build()
             .getAsJSONObject(object : JSONObjectRequestListener {
